@@ -1,1 +1,62 @@
-Leveling up my ruby awesomeness!
+WordWrap Kata
+   Create a "WordWrap" class that is initialized with an integer parameter
+      - detail: The parameter is the wrap column
+      - example: WordWrap.new 4
+      - detail: Non-integer parameters raise an exception
+      - example: WordWrap.new raises an exception
+      - example: WordWrap.new "foo" raises an exception
+
+completed (Y|n):
+
+   "wrap" method
+      Create a wrap method that takes a string parameter
+         - example: WordWrap.new(5).wrap "this is text"
+         - detail: The method should raise an exception for non-string parameters
+         - example: WordWrap.new(4).wrap([1,2,3]) raises an exception
+
+completed (Y|n):
+
+      It should wrap the empty string to an empty string
+         - example: WordWrap.new(4).wrap("") returns ""
+
+completed (Y|n):
+
+      It should return one short word as-is
+         - example: WordWrap.new(6).wrap("word") returns "word"
+
+completed (Y|n):
+
+      It should wrap text at the last space before the wrap length
+         - example: WordWrap.new(5).wrap("word word") returns "word\nword"
+         - example: WordWrap.new(5).wrap("word word word") returns "word\nword\nword"
+         - example: WordWrap.new(10).wrap("word word word") returns "word word\nword"
+
+completed (Y|n):
+
+     Long words without spaces should be broken at the wrap length
+        - example: WordWrap.new(4).wrap("wordword") returns "word\nword"
+
+completed (Y|n):
+
+     Strings with long words and spaces should mix breaking words and at spaces
+        - example: WordWrap.new(3).wrap("word word word") returns "wor\nd\nwor\nd\nwor\d"
+
+completed (Y|n):
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Requirement                                                                      ┃ Time     ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ Create a "WordWrap" class that is initialized with an integer parameter          ┃ 00:08:13 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ Create a wrap method that takes a string parameter                               ┃ 00:03:50 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ It should wrap the empty string to an empty string                               ┃ 00:01:21 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ It should return one short word as-is                                            ┃ 00:01:11 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ It should wrap text at the last space before the wrap length                     ┃ 00:22:12 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ Long words without spaces should be broken at the wrap length                    ┃ 00:17:35 ┃
+┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╊━━━━━━━━━━┫
+┃ Strings with long words and spaces should mix breaking words and at spaces       ┃ 00:29:52 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┛
